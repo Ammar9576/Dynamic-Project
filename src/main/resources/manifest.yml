@@ -1,0 +1,15 @@
+---
+applications:
+- name: convergence-repo-prod
+  instances: 2
+  memory: 2G
+  path: ../convergence-repo.war
+  host: convergence-repo-prod
+  buildpack: https://github.com/cloudfoundry/java-buildpack#v4.6
+  #buildpack: java_buildpack_offline
+env:
+   CF_STAGING_TIMEOUT: 100
+   CF_STARTUP_TIMEOUT: 100      
+   SPRING_PROFILES_ACTIVE: prod
+   http_proxy: http://proxy.inbcu.com:80
+   https_proxy: http://proxy.inbcu.com:80

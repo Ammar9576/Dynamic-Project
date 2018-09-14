@@ -1,0 +1,31 @@
+spring:
+ profiles: "default"
+ data:
+   mongodb:
+     database:  nbcapps
+     host: ashdbld00027.stg-tfayd.com
+     port: 27017
+     username: nbcappsUser
+     password: 4FD27fTU
+     repositories:
+      enabled: true
+linearSearchApi: http://plansearch-dev.devash.inbcu.com/plan/plan/page/1?pageSize=50
+digitalOrderApi: https://convergence-digital-dev.devash.inbcu.com/salesOrder/metadata?planIds[]=
+defaultAudienceGuar: Linear - Digital Combined
+planStatusApi: http://linear-reporting-dev.devash.inbcu.com/planStatus/getStatusForPlans?ids=
+invlidPlanStatusCodes: 1336008,1336013
+revTypeApi: http://linear-reporting-dev.devash.inbcu.com/revisionType/findRevisionTypeByIds?ids=
+indexcDealApi: http://convergence-index-dev.devash.inbcu.com/indexCDeal/
+reportName: Proposal Report
+statusWorking: Working
+statusOrder: Order
+security:
+  basic:
+    enabled: false
+    
+    
+    
+defaultPageSize: 100
+maxDataLimit: 15
+
+indexParams: name,id,advertiser,agency,demo
